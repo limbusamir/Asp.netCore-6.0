@@ -1,0 +1,67 @@
+﻿@model IEnumerable<SADBLTrainingReport.ViewModels.ProgramNameViewModel>
+@{
+    ViewData["Title"] = "SDBL-Training Report";
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-scusess-message-box mt-2 py-2 pe-0" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["DeleteMessage"] != null)
+{
+    <div class="alert alert-danger alert-scusess-message-box mt-2 py-2 pe-0" role="alert">
+        @TempData["DeleteMessage"]
+    </div>
+
+}
+@* <section class="content"> *@
+<div class="mt-4">
+
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-8">
+                    <h6 class="text-primary fw-bold">Program Name List</h6>
+                </div>
+                <div class="col-4">
+                    <a asp-controller="ProgramName" asp-action="Create" class="btn btn-primary btn-primary-custom">Create Program Name</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body" width="100%">
+            <table class="table  table-striped text-white table-custom-list" border="1" width="100%">
+                <thead class="text-bg-primary">
+                    <tr class="text-bg-primary">
+                        <th class="" border="1">Program Name</th>
+                        <th class="" border="1">Created By</th>
+                        <th colspan="2" class=" text-center" border="1">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td class="">@obj.programName</td>
+                            <td class="">@obj.created_By</td>
+                            <td class="text-center"><a asp-controller="ProgramName" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-info">Edit</a></td>
+                            <td class="text-center">
+                                <a class="btn btn-danger delete"
+                                   data-id="@obj.Id"
+                                   data-controller="ProgramName"
+                                   data-action="Delete"
+                                   data-redirect-url="ProgramName/Index"
+                                   data-body-message="Are you sure to delete this data?">Delete</a>
+                            </td>
+                        </tr>
+
+                    }
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

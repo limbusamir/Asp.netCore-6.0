@@ -1,0 +1,50 @@
+﻿@model TargetGroup
+@{
+    ViewData["Title"] = "SDBL-Training Report";
+}
+<form method="post">
+    <div class="container mt-4">
+
+        <div class="row custom-table-width-50" style="width:50%;margin-left:22%;margin-left:22%">
+            <div class="col-12 text-center">
+                <h6 class="py-2 fw-bold">Target Group</h6>
+            </div>
+            <div asp-validation-summary="All" class="text-danger">
+            </div>
+            <div class="col-12">
+                <table class="table table-responsive table-striped" border="1" width="100%">
+                    <tr>
+                        <td>
+                            <label asp-for="targetName" class=""></label>
+                        </td>
+                        <td>
+                            <input asp-for="targetName" class="form-control " />
+                            <span asp-validation-for="targetName" class="text-danger"></span>
+                        </td>
+
+                    </tr>
+
+
+                </table>
+                <div class="text-end">
+                    <button class="btn btn-primary">Save</button>
+                    <a asp-controller="TargetGroup" asp-action="Index" class="btn btn-secondary">Back to List</a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    @section Scripts{
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    }
+</form>
+
+
+
+
+
+

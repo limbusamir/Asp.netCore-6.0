@@ -1,0 +1,52 @@
+﻿@model SADBLTrainingReport.ViewModels.OrganizerViewModel
+@{
+    ViewData["Title"] = "SDBL-Training Report";
+}
+<form method="post" asp-action="Edit">
+    <div class="container mt-4">
+
+        <div class="row custom-table-width-50">
+            <div class="col-12 text-center">
+                <h6 class="py-2 text-white fw-bold">Organizer</h6>
+            </div>
+            <div asp-validation-summary="All" class="text-danger">
+            </div>
+            <div class="col-12">
+                <table class="table table-responsive table-striped" border="1" width="100%">
+                    <tr>
+                        <td>
+                            <label asp-for="organizerName" class="text-white"></label>
+                        </td>
+                        <td>
+                            <input asp-for="organizerName" class="form-control" />
+                            <span asp-validation-for="organizerName" class="text-danger"></span>
+                        </td>
+
+                    </tr>
+
+
+                </table>
+                <div class="text-end">
+                    <button class="btn btn-primary">Update</button>
+                    <a asp-controller="Organizer" asp-action="Index" class="btn btn-secondary">Back to List</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @section Scripts{
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    }
+</form>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/*Custom*/
+.custom-table-width-50 {
+    width: 50%;
+    margin-left: 22%;
+    margin-left: 22%
+}
+.table-custom-list tr
+.table-custom-list tr th {
+    font-size: 14px;
+}
+.table-custom-list tr td {
+    font-size: 13px;
+}
+.table-custom-list tr td a {
+    font-size: 12px;
+}
+.alert-scusess-message-box {
+    font-size:12px;
+    
+
+}
+.btn-primary-custom {
+font-size:12px;
+}
+
+/*Custom Theme*/
+.nav-sidebar .nav-link p {
+    font-size:14px !important;
+}
+.table th {
+    /*padding:0px;*/
+}
+.main-sidebar .brand-text {
+    font-size:16px !important;
+}
+label {
+    font-size:0.9rem;
+}
+input{
+    height:1.5rem !important;
+    font-size:0.2rem;
+}
+select {
+    height: 1.5rem !important;
+    font-size: 0.2rem;
+    padding: 0 2.25rem 0 0.75rem !important;
+}
+.btn-grid-custom {
+    font-size: 14px;
+    padding: 1px 15px 1px 15px;
+}
